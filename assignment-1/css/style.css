@@ -1,46 +1,133 @@
-/*  SECTIONS  */
-.section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
+html, body {
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    text-align: center;
+}
+/*/********** Large devices only **********/
+@media (min-width: 992px) {
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    background: #aaa;
+    margin: 10px auto;
+    position: relative;
+    text-align:center;
 }
 
-/*  COLUMN SETUP  */
-.col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.6%;
-}
-.col:first-child { margin-left: 0; }
+.column-left, .column-middle, .column-right  {
 
-
-/*  GROUPING  */
-.group:before,
-.group:after {
-	content:"";
-	display:table;
-}
-.group:after {
-	clear:both;
-}
-.group {
-    zoom:1; /* For IE 6/7 */
+    background: green;
+    /*height: 100px;*/
+    width: 20%;
+    margin: 10px;
+   	padding: 4%;
+   	border: 3px solid black;
+	position: relative;
 }
 
-/*  GRID OF THREE  */
-.span_3_of_3 {
-	width: 100%;
-}
-.span_2_of_3 {
-	width: 66.1%;
-}
-.span_1_of_3 {
-	width: 32.2%;
+ .topcorner{
+ 	background: grey;
+   position:absolute;
+   width: 33%;
+   border: 3px solid black;
+   top:0;
+   right:0;
+  }
+ }
+
+/*********** Medium devices only **********/
+@media (min-width: 768px) and (max-width: 991px){
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background: #aaa;
+    margin: 10px auto;
+    position: relative;
+    text-align:center;
 }
 
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+.column-left, .column-middle  {
 
-@media only screen and (max-width: 480px) {
-	.col { margin: 1% 0 1% 0%;}
-	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+    background: red;
+    /*height: 100px;*/
+    width: 30%;
+    margin: 10px;
+   	padding: 4%;
+   	border: 3px solid black;
+	position: relative;
 }
+
+.column-right {
+	background: red;
+	width: 70%;
+	padding: 1%;
+   	border: 3px solid black;
+	position: relative;
+}
+
+ .topcorner{
+ 	background: grey;
+   position:absolute;
+	width: 33%;
+   border: 3px solid black;
+   top:0;
+   right:0;
+  }
+ }
+
+ /*********** Small devices only **********/
+@media (max-width: 767px) {
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    background: #eee;
+    margin: 10px auto;
+    position: relative;
+    text-align:center;
+}
+
+.column-left  {
+
+    background: white;
+    /*height: 100px;*/
+    width: 30%;
+    margin: 10px;
+   	padding: 4%;
+   	border: 3px solid black;
+	position: relative;
+}
+.column-middle  {
+
+    background: white;
+    /*height: 100px;*/
+    width: 30%;
+    margin: 10px;
+   	padding: 4%;
+   	border: 3px solid black;
+	position: relative;
+}
+
+.column-right {
+	background: white;
+	width: 70%;
+	padding: 1%;
+   	border: 3px solid black;
+	position: relative;
+}
+ .topcorner{
+ 	background: grey;
+   position:absolute;
+   width: 33%;
+   border: 3px solid black;
+   top:0;
+   right:0;
+  }
+ }
