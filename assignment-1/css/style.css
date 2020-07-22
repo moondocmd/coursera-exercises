@@ -1,133 +1,68 @@
+
+
 html, body {
-    margin:0;
-    padding:0;
-    width:100%;
-    height:100%;
     text-align: center;
+    max-width: 1200px;
 }
-/*/********** Large devices only **********/
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background: #a7aba9;
+  padding: 5px;
+}
+
+.text{
+	margin-top: 55px;
+}
+
+.column-left, .column-middle, .column-right {
+	border: 1px solid black;
+	position: relative;
+	padding: 2px;
+	margin: 2%;
+	background: #bad1a5;
+}
+
+.section-title{
+	height: 45px;
+	position: absolute;
+	width: 34%;
+	border: 1px solid black;
+	top:0;
+	right:0;
+}
+
+.column-left .section-title{
+	background: #f0d0b6;
+}
+
+.column-middle .section-title{
+	background: #7ff0c8;
+}
+
+.column-right .section-title{
+	background: #bcbed1;
+}
+
+/* Desktop View */
 @media (min-width: 992px) {
-.container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 70%;
-    background: #aaa;
-    margin: 10px auto;
-    position: relative;
-    text-align:center;
+	.column-left, .column-middle, .column-right {
+	  flex: 1;
+	}
 }
 
-.column-left, .column-middle, .column-right  {
-
-    background: green;
-    /*height: 100px;*/
-    width: 20%;
-    margin: 10px;
-   	padding: 4%;
-   	border: 3px solid black;
-	position: relative;
-}
-
- .topcorner{
- 	background: grey;
-   position:absolute;
-   width: 33%;
-   border: 3px solid black;
-   top:0;
-   right:0;
-  }
- }
-
-/*********** Medium devices only **********/
+/* Tablet View */
 @media (min-width: 768px) and (max-width: 991px){
-.container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    background: #aaa;
-    margin: 10px auto;
-    position: relative;
-    text-align:center;
-}
-
-.column-left, .column-middle  {
-
-    background: red;
-    /*height: 100px;*/
-    width: 30%;
-    margin: 10px;
-   	padding: 4%;
-   	border: 3px solid black;
-	position: relative;
-}
-
-.column-right {
-	background: red;
-	width: 70%;
-	padding: 1%;
-   	border: 3px solid black;
-	position: relative;
-}
-
- .topcorner{
- 	background: grey;
-   position:absolute;
-	width: 33%;
-   border: 3px solid black;
-   top:0;
-   right:0;
+	.column-left, .column-middle {
+		flex: 1;
+	}
+	.column-right {
+	order: 2; 
   }
- }
-
- /*********** Small devices only **********/
-@media (max-width: 767px) {
-.container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 70%;
-    background: #eee;
-    margin: 10px auto;
-    position: relative;
-    text-align:center;
-}
-
-.column-left  {
-
-    background: white;
-    /*height: 100px;*/
-    width: 30%;
-    margin: 10px;
-   	padding: 4%;
-   	border: 3px solid black;
-	position: relative;
-}
-.column-middle  {
-
-    background: white;
-    /*height: 100px;*/
-    width: 30%;
-    margin: 10px;
-   	padding: 4%;
-   	border: 3px solid black;
-	position: relative;
-}
-
-.column-right {
-	background: white;
-	width: 70%;
-	padding: 1%;
-   	border: 3px solid black;
-	position: relative;
-}
- .topcorner{
- 	background: grey;
-   position:absolute;
-   width: 33%;
-   border: 3px solid black;
-   top:0;
-   right:0;
+  .column-right .section-title{
+  	width: 17%;
   }
- }
+}
+/*********** Smartphone View - no changes needed, automatically wraps **********/
+@media (max-width: 767px) {}
