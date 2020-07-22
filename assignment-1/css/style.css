@@ -8,7 +8,7 @@ html, body {
 .container {
   display: flex;
   flex-wrap: wrap;
-  background: #a7aba9;
+  /*background: #a7aba9;*/
   padding: 5px;
 }
 
